@@ -2,17 +2,17 @@
 
 ### Technical Implementation
 The pipeline focuses on three different vectorization strategies to determine which holds up best against unseen data:
-* [cite_start]**TF-IDF:** Configured with a maximum of 10,000 features to capture discriminative unigram patterns[cite: 20].
-* [cite_start]**Word2Vec:** Utilized Google News 300d pre-trained embeddings to leverage dense semantic relationships[cite: 21].
-* [cite_start]**GloVe:** Utilized Wikipedia 100d pre-trained word vectors for mean-pooling document representation[cite: 22].
+**TF-IDF:** Configured with a maximum of 10,000 features to capture discriminative unigram patterns.
+**Word2Vec:** Utilized Google News 300d pre-trained embeddings to leverage dense semantic relationships.
+**GloVe:** Utilized Wikipedia 100d pre-trained word vectors for mean-pooling document representation.
 
 ### Engineering Challenges
-* [cite_start]**HTML Markup:** Because the IMDB dataset contains raw HTML, a specific preprocessing step was implemented to strip tags before normalization[cite: 13].
-* [cite_start]**Semantic Normalization:** We opted for WordNetLemmatizer rather than simple stemming to ensure words were reduced to accurate base forms, preserving the semantic integrity needed for Word2Vec and GloVe.
-* [cite_start]**Real-time Evaluation:** The Streamlit interface was built to handle CSV uploads of up to 200MB, allowing for side-by-side comparison of how different vectorizers classify the same input[cite: 10, 35].
+**HTML Markup:** Because the IMDB dataset contains raw HTML, a specific preprocessing step was implemented to strip tags before normalization.
+**Semantic Normalization:** We opted for WordNetLemmatizer rather than simple stemming to ensure words were reduced to accurate base forms, preserving the semantic integrity needed for Word2Vec and GloVe.
+**Real-time Evaluation:** The Streamlit interface was built to handle CSV uploads of up to 200MB, allowing for side-by-side comparison of how different vectorizers classify the same input.
 
 ### Final Performance Metrics
-[cite_start]The following results were recorded using a Logistic Regression classifier across the IMDB test set[cite: 9, 23]:
+The following results were recorded using a Logistic Regression classifier across the IMDB test set:
 
 | Method | Accuracy | Correct | Incorrect |
 | :--- | :--- | :--- | :--- |
@@ -22,7 +22,6 @@ The pipeline focuses on three different vectorization strategies to determine wh
 
 ### Setup and Usage
 1. Clone the repository:
-   git clone https://github.com/yourusername/nlp-robust-classification.git
 
 2. Install the requirements:
    pip install -r requirements.txt
