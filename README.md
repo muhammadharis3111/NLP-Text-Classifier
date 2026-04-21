@@ -2,8 +2,11 @@
 
 ### Technical Implementation
 The pipeline focuses on three different vectorization strategies to determine which holds up best against unseen data:
+
 **TF-IDF:** Configured with a maximum of 10,000 features to capture discriminative unigram patterns.
+
 **Word2Vec:** Utilized Google News 300d pre-trained embeddings to leverage dense semantic relationships.
+
 **GloVe:** Utilized Wikipedia 100d pre-trained word vectors for mean-pooling document representation.
 
 ### Engineering Challenges
