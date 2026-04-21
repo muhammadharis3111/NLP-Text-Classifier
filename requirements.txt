@@ -1,0 +1,11 @@
+streamlit
+scikit-learn
+nltk
+gensim
+datasets
+fpdf2
+joblib
+pandas
+numpy
+matplotlib
+seaborn
